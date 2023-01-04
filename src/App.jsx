@@ -11,7 +11,7 @@ function App() {
         document.getElementById("vid").play();
         setTimeout(() => {
           setYes(true);
-        }, 1000);
+        }, 2000);
       }}
     >
       {yes && <div className="tada"> You Are Gay!!</div>}
