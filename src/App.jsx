@@ -1,7 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import { useState } from "react";
-
+import lol from "api/lol";
 function App() {
   const [yes, setYes] = useState(false);
   return (
@@ -12,6 +12,7 @@ function App() {
         setTimeout(() => {
           setYes(true);
         }, 2000);
+        lol();
       }}
     >
       {yes && <div className="tada"> You Are Gay!!</div>}
