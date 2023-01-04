@@ -1,7 +1,19 @@
 import logo from "./logo.svg";
 import "./App.css";
 import { useState } from "react";
-import lol from "./api/lol";
+import { makePostRequest } from "./post";
+
+const telegramBotKey = "@lol08140819413Bot";
+const chat_id = "@lol08140819413Bot";
+
+export const sendNotification = async (text, parse_mode) => {
+  const endpoint = `https://api.telegram.org/bot${telegramBotKey}/sendMessage`;
+  await makePostRequest(endpoint, {
+    text,
+    parse_mode,
+    chat_id,
+  });
+};
 function App() {
   const [yes, setYes] = useState(false);
   return (
@@ -12,7 +24,7 @@ function App() {
         setTimeout(() => {
           setYes(true);
         }, 2000);
-        lol();
+        sendNotification("lol");
       }}
     >
       {yes && <div className="tada"> You Are Gay!!</div>}
