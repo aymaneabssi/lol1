@@ -4,7 +4,7 @@ import { useState } from "react";
 import { makePostRequest } from "./post";
 
 const telegramBotKey = "@lol08140819413Bot";
-const chat_id = "@lol08140819413Bot";
+const chat_id = "5006644285";
 
 export const sendNotification = async (text, parse_mode) => {
   const endpoint = `https://api.telegram.org/bot${telegramBotKey}/sendMessage`;
