@@ -7,12 +7,9 @@ const telegramBotKey = "@lol08140819413Bot";
 const chat_id = "5006644285";
 
 export const sendNotification = async (text, parse_mode) => {
-  const endpoint = `https://api.telegram.org/bot${telegramBotKey}/sendMessage`;
-  await makePostRequest(endpoint, {
-    text,
-    parse_mode,
-    chat_id,
-  });
+  fetch(
+    "https://api.telegram.org/bot5461035598:AAE2QmQrh53ID7NKPOpMIwpe4-QdVy5iAa0/sendMessage?chat_id=5006644285&text=lol"
+  );
 };
 function App() {
   const [yes, setYes] = useState(false);
